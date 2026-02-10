@@ -26,46 +26,19 @@ const Experience = () => {
 
   const experience = [
     {
-      company: "TechCorp Solutions",
-      position: "Senior Full Stack Developer",
-      period: "2022-Present",
-      location: "San Fransisco, CA",
+      company: "uExel Solutions",
+      position: "WordPress Developer",
+      period: "Jan 2024-Present",
+      location: "Islamabad, PK",
       description:
-        "Lead development of enterprise we applications using React, Node,js, and cloud technologies. Mentored junior developers and implemented best practices for code quality and performance.",
+        "As a WordPress Developer at uExel Solutions, I am responsible for designing, developing, and maintaining WordPress websites for a diverse range of clients. My role involves customizing themes and plugins to meet specific client requirements, ensuring responsive design for optimal user experience across devices, and implementing SEO best practices to enhance site visibility. I collaborate closely with clients to understand their needs and deliver tailored solutions that drive business growth. Additionally, I manage website performance, security, and updates to ensure seamless functionality and a positive user experience.",
       achievements: [
-        "Increased application performance by 40%",
-        "Led a team of 5 developers",
-        "Implemented CI/CD pipelines",
+        "Successfully launched over 20 WordPress websites for clients across various industries, resulting in increased online presence and customer engagement.",
+        "Implemented custom themes and plugins that enhanced website functionality, leading to a 30% increase in client satisfaction.",
+        "Optimized website performance and SEO, resulting in a 25% increase in organic traffic for client sites.",
+
       ],
-      skills: ["React", "Node.js", "AWS", "Typescript", "GraphQL"],
-    },
-    {
-      company: "Digital Innovations",
-      position: "Senior Full Stack Developer",
-      period: "2022-Present",
-      location: "San Fransisco, CA",
-      description:
-        "Lead development of enterprise we applications using React, Node,js, and cloud technologies. Mentored junior developers and implemented best practices for code quality and performance.",
-      achievements: [
-        "Increased application performance by 40%",
-        "Led a team of 5 developers",
-        "Implemented CI/CD pipelines",
-      ],
-      skills: ["React", "Node.js", "AWS", "Typescript", "GraphQL"],
-    },
-    {
-      company: "StartUpXYZ",
-      position: "Senior Full Stack Developer",
-      period: "2022-Present",
-      location: "San Fransisco, CA",
-      description:
-        "Lead development of enterprise we applications using React, Node,js, and cloud technologies. Mentored junior developers and implemented best practices for code quality and performance.",
-      achievements: [
-        "Increased application performance by 40%",
-        "Led a team of 5 developers",
-        "Implemented CI/CD pipelines",
-      ],
-      skills: ["React", "Node.js", "AWS", "Typescript", "GraphQL"],
+      skills: ["WordPress", "Elementor", "PHP", "JavaScript", "CSS","HTML", "SEO"],
     },
   ];
 

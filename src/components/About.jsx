@@ -67,7 +67,7 @@ const About = () => {
                   <span>next Project</span>
                 </h2>
                 <p className="text-green-400 font-semibold delay-200">
-                  UI / UX Designer & Web Developer
+                  WordPress Developer
                 </p>
               </div>
               <div className="space-y-6 text-gray-300 leading-relaxed">
@@ -76,22 +76,9 @@ const About = () => {
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 translate-x-10"
               }`}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Sapiente rem veritatis odio temporibus est perferendis id
-                  culpa ducimus architecto voluptatem tenetur harum, quae dolor
-                  vero minus doloribus provident sit molestias ut et porro
-                  maxime! A, cum maiores illo velit suscipit quod facere
-                  quibusdam eos nemo eveniet minus voluptatem quasi!
+                  I’m a passionate WordPress Developer specializing in Elementor, PHP, CSS, JavaScript, and HTML. I create modern, responsive, and user-friendly websites tailored to your business goals. Whether you need a new website, a redesign, theme customization, or bug fixing, I deliver clean, functional, and visually appealing solutions that make your online presence stand out.
                 </p>
-                <p className={`transition-all duration-1000 delay-700 ${
-                isVisible
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 translate-x-10"
-              }`}>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Harum culpa nam dolores fugiat suscipit quia ea fugit, iste
-                  adipisci sed praesentium officiis qui doloremque rerum nisi!
-                </p>
+              
               </div>
               <div
                 className={`grid grid-cols-3 gap-8 py-6 transition-all duration-1000 delay-500 ${

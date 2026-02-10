@@ -31,14 +31,15 @@ const Footer = () => {
                 .
               </span>
             </div>
-            <p className="text-gray-400 hover:text-gray-300 transition-all duration-300">
-              Full Stack Developer & UI/UX Designer
+            <p className="text-gray-400">
+              A passionate WordPress developer crafting digital experiences.
+
             </p>
           </div>
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2 text-gray-400">
               <span>Made With</span>
-              <Heart className="w-4 h-4 text-green-500 fill-current" />
+              <Heart className="w-4 h-4 text-red-400 fill-current" />
               <span>by Imran Uddin</span>
             </div>
             <button className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center

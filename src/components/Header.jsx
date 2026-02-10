@@ -1,7 +1,10 @@
 import { Menu, X } from "lucide-react";
 import React, { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -13,10 +16,23 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  const handleNavigation = (href) => {
+    if (location.pathname !== "/") {
+      // If not on home page, navigate to home first
+      navigate("/");
+      // Wait a bit for navigation to complete, then scroll
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      // Already on home page, just scroll
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
     setIsMenuOpen(false);
   };
@@ -36,14 +52,13 @@ const Header = () => {
         isScrolled
           ? "bg-slate-950 backdrop-blur-lg shadow-lg border-b border-slate-800"
           : "bg-transparent"
-      }`}>
+      }`}
+    >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className=" flex items-center align-center text-2xl font-bold">
-            <img className="w-[50px]" src="/src/assets\Logo.png" />
+          <div className=" flex items-center align-center text-lg font-bold">
+            <img className="w-[30px]" src="/src/assets\Logo.png" />
             <span className="text-blue-400 pl-2 pr-3">IMRAN</span>
-            <span className="text-white"> UDDIN</span>
-            <span className="text-blue-400">.</span>
           </div>
 
           {/* Desktop Menu */}
@@ -52,21 +67,31 @@ const Header = () => {
               return (
                 <button
                   key={index}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavigation(item.href)}
                   className="text-gray-300 hover:text-green-400 transition-all duration-300 font-medium relative group"
-                  style={{ animationDelay: `${index * 0.1}s` }}>
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
                   {item.name}
                   <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
                 </button>
               );
             })}
           </nav>
-          <button className="hidden md:flex items-center gap-2 bg-green-600 text-white px-6 py-2.5 rounded-lg hover:bg-green-700 transition-all duration-300 font-medium shadow-lg over:shadow-xl hover:scale-105">
-            Download CV Now
-          </button>
+          <a
+            href="https://wa.me/923453923853"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="hidden md:flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all duration-300 font-medium shadow-lg hover:shadow-xl hover:scale-105">
+              Hire Me...
+            </button>
+          </a>
 
           {/* Mobile Menu Button */}
-          <button>
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden"
+          >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -78,7 +103,9 @@ const Header = () => {
               return (
                 <button
                   key={item.name}
-                  className="block w-full text-left py-3 px-4 text-gray-300 hover:text-green-400 hover:bg-slate-700 transition-all duration-300 rounded-lg">
+                  onClick={() => handleNavigation(item.href)}
+                  className="block w-full text-left py-3 px-4 text-gray-300 hover:text-green-400 hover:bg-slate-700 transition-all duration-300 rounded-lg"
+                >
                   {item.name}
                 </button>
               );

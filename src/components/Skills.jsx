@@ -25,28 +25,27 @@ const Skills = () => {
   }, []);
 
   const skills = [
-    { name: "UI/UX", level: 70 },
-    { name: "BRANDING", level: 65 },
-    { name: "DEVELOPMENT", level: 75 },
-    { name: "WEB DESIGN", level: 80 },
-    { name: "SEO", level: 90 },
-    { name: "GRAPHIC DESIGN", level: 85 },
+    { name: "WORDPRESS", level: 95 },
+    { name: "PHP", level: 85 },
+    { name: "HTML", level: 80 },
+    { name: "CSS", level: 80 },
+    { name: "JAVASCRIPT", level: 90 },
+    { name: "SATISFACTION", level: 100 },
   ];
 
   const education = [
     {
-      year: "2017-2019",
-      title: "Diploma Development",
-      institution: "Technical Institute",
-      description:
-        "The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture.",
+      year: "2022-2024",
+      title: "Diploma WordPress Development",
+      institution: "Execudea Islamabad",
+      description: "Learned the art of WordPress development, including theme and plugin creation, customization, and optimization. Gained hands-on experience in building dynamic websites, managing content, and ensuring responsive design. This education has equipped me with the skills to create fully functional and visually appealing WordPress sites.",
     },
     {
-      year: "2019-2021",
-      title: "Computer Science",
-      institution: "State University",
+      year: "2021-2022",
+      title: "SEO",
+      institution: "IPA Karachi",
       description:
-        "The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture.",
+        "Learned the art of optimizing websites for search engines, including keyword research, on-page and off-page SEO techniques, and analytics to improve website visibility and ranking. Which helped me to make websites fully SEO optimized.",
     },
   ];
 

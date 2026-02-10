@@ -53,15 +53,21 @@ const [isVisible, setIsVisible] = useState(false);
               projects.Whether you have a question or just want to say hi, I'll
               try my best to get back to you.
             </p>
-            <div className="space-y-4">
+            <div className="space-y-12">
               {[
                 {
                   icon: Mail,
                   title: "Email",
                   info: "imranuddin9990@gmail.com",
                 },
-                { icon: Phone, title: "Phone", info: "+1 123 456 7890" },
-                { icon: MapPin, title: "Location", info: "Islamabad" },
+                { icon: Phone, 
+                  title: "Phone", 
+                  info: "+923453923853" 
+                },
+                { icon: MapPin, 
+                  title: "Location", 
+                  info: "Islamabad" 
+                },
               ].map((contact, index) => {
                 const IconComponent = contact.icon;
                 return (
@@ -85,7 +91,7 @@ const [isVisible, setIsVisible] = useState(false);
               })}
             </div>
 
-            <div className={`pt-8 transition-all duration-1000 delay-900 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+            {/* <div className={`pt-8 transition-all duration-1000 delay-900 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
               <h4 className="text-lg font-semibold text-white mb-4">
                 Follow Me
               </h4>
@@ -99,7 +105,7 @@ const [isVisible, setIsVisible] = useState(false);
                   );
                 })}
               </div>
-            </div>
+            </div> */}
           </div>
           {/* Contact Form */}
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
